@@ -2,6 +2,7 @@ var path = require('path')
 var child_process = require('child_process')
 
 module.exports = function (args, callback) {
+	args.maxBuffer = 1024 * 500;
   child_process.exec(module.exports.binaryPath + ' ' + args, callback)
 }
 
